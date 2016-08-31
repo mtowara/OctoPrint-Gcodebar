@@ -24,14 +24,17 @@ class GcodebarPlugin(octoprint.plugin.SettingsPlugin,
 
 	##~~ AssetPlugin mixin
 
-	def get_assets(self):
-		# Define your plugin's asset files to automatically include in the
-		# core UI here.
-		return dict(
-			js=["js/GCodeBar.js"],
-			css=["css/GCodeBar.css"],
-			less=["less/GCodeBar.less"]
-		)
+	#def get_assets(self):
+	#	# Define your plugin's asset files to automatically include in the
+	#	# core UI here.
+	#	return dict(
+	#		js=["js/GCodeBar.js"]#,
+	#		#css=["css/GCodeBar.css"],
+	#		#less=["less/GCodeBar.less"]
+	#	)
+
+	def get_template_configs(self):
+		return [dict(type="sidebar", custom_bindings=False)]
 
 	##~~ Softwareupdate hook
 
