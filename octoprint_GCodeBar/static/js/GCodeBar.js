@@ -19,11 +19,11 @@ $(function() {
         }
 
         self.sendCommand = function() {
-            console.log("Hello SendCommand " + self.commandString());
-            self.terminal.command(self.commandString());
+            console.log("Hello SendCommand " + self.commandString());            
             var splitCommands = self.commandString().split(";");     
             var len = splitCommands.length;
             for(var i=0;i<len;i++){
+                self.terminal.command(splitCommands[i]);
                 self.terminal.sendCommand();
             }
 
