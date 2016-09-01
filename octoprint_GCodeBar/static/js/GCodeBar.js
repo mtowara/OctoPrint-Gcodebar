@@ -21,7 +21,12 @@ $(function() {
         self.sendCommand = function() {
             console.log("Hello SendCommand " + self.commandString());
             self.terminal.command(self.commandString());
-            self.terminal.sendCommand();
+            var splitCommands = self.commandString().split(";");     
+            var len = splitCommands.length;
+            for(var i=0;i<len;i++){
+                self.terminal.sendCommand();
+            }
+
             self.cmdHistoryIdx = self.terminal.cmdHistory.length;
             self.commandString("");
         };
