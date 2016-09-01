@@ -8,8 +8,7 @@ $(function() {
     function GcodebarViewModel(parameters) {
         var self = this;
         self.loginState = parameters[0];
-        self.control = parameters[1];
-        self.terminal = parameters[2];
+        self.terminal = parameters[1];
 
         self.commandString = ko.observable("");
         self.cmdHistoryIdx=-1;
@@ -60,7 +59,7 @@ $(function() {
     // view model class, parameters for constructor, container to bind to
     OCTOPRINT_VIEWMODELS.push([
         GcodebarViewModel,
-        ["loginStateViewModel","controlViewModel","terminalViewModel"],
+        ["loginStateViewModel","terminalViewModel"],
         ["#gcode_bar"]
     ]);
 });
