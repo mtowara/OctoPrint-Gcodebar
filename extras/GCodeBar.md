@@ -3,41 +3,29 @@ layout: plugin
 
 id: GCodeBar
 title: OctoPrint-Gcodebar
-description: TODO
+description: Plugin for Octoprint to allow sending GCode commands from the control tab
 author: Markus Towara
 license: AGPLv3
 
-# TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+date: 2015-09-01
 
 homepage: https://github.com/mtowara/OctoPrint-Gcodebar
 source: https://github.com/mtowara/OctoPrint-Gcodebar
 archive: https://github.com/mtowara/OctoPrint-Gcodebar/archive/master.zip
 
-# TODO set this to true if your plugin uses the dependency_links setup parameter to include
-# library versions not yet published on PyPi. SHOULD ONLY BE USED IF THERE IS NO OTHER OPTION!
 follow_dependency_links: false
 
-# TODO
 tags:
-- a list
-- of tags
-- that apply
-- to your plugin
-- (take a look at the existing plugins for what makes sense here)
+- gcode
+- control
+- sidebar
 
-# TODO
 screenshots:
-- url: url of a screenshot
-  alt: alt-text of a screenshot
-  caption: caption of a screenshot
-- url: url of another screenshot
-  alt: alt-text of another screenshot
-  caption: caption of another screenshot
-- ...
+- url: https://github.com/mtowara/OctoPrint-Gcodebar/blob/master/doc/screen.png
+  alt: Screenshot
+  caption: Send Custom GCodes
 
-# TODO
-featuredimage: url of a featured image for your plugin
+featuredimage: https://github.com/mtowara/OctoPrint-Gcodebar/blob/master/doc/screen.png
 
 compatibility:
   # list of compatible versions, for example 1.2.0. If left empty no specific version requirement will be assumed
@@ -51,5 +39,20 @@ compatibility:
   - macos
 ---
 
-**TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-http://plugins.octoprint.org/plugin/GCodeBar/
+# OctoPrint-Gcodebar
+
+Plugin for Octoprint to allow sending GCode commands from the sidebar.
+
+![Screenshot](/doc/screen.png)
+
+Features:
+- Hooks into the Terminal Tab and uses same history (scrollable with up / down keys)
+- Send multiple commands seperated by semicolons
+- User needs to be logged in and connected to printer to send commands
+
+## Setup
+
+Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
+or manually using this URL:
+
+    https://github.com/mtowara/OctoPrint-Gcodebar/archive/master.zip
