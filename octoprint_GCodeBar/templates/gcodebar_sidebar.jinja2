@@ -1,8 +1,6 @@
-<div id="gcode_bar" data-bind="visible: loginState.isUser()">
-	<td style="vertical-align: middle">
-		<div class="input-append">
-			<input type="text" id="gcode_input" data-bind="textInput: gcodeEdit" placeholder="Enter GCode here"/>
-			<button type="submit" class="btn">Send</button>
-		</div>
-	</td>
+<div id="gcode_bar">
+    <div class="input-append">
+        <input type="text" autocomplete="off" id="command-search" data-bind="enable: loginState.isUser() && terminal.isOperational(), textInput: commandString, event: { keydown: handleKeyDown, keyup: handleKeyUp }" placeholder="Enter GCode here"/>
+        <button type="submit" class="btn" data-bind="enable: loginState.isUser() && terminal.isOperational(), click: sendCommand">Send</button>
+    </div>
 </div>
