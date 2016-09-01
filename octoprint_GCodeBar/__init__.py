@@ -11,9 +11,11 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class GcodebarPlugin(octoprint.plugin.SettingsPlugin,
-                     octoprint.plugin.AssetPlugin,
-                     octoprint.plugin.TemplatePlugin):
+class GcodebarPlugin(
+	octoprint.plugin.SettingsPlugin,
+	octoprint.plugin.AssetPlugin,
+	octoprint.plugin.TemplatePlugin
+	):
 
 	##~~ SettingsPlugin mixin
 
