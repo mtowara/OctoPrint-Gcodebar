@@ -29,6 +29,7 @@ $(function() {
         self.handleKeyUp = function (d, e) {
             if (e.keyCode == 13) {
                 self.sendCommand();
+                return false;
             }
             return true;
         }
