@@ -2,6 +2,8 @@
 
 Plugin for Octoprint to allow sending GCode commands from the sidebar.
 
+![Screenshot](/doc/screen.png)
+
 Features:
 - Hooks into the Terminal Tab and uses same history (scrollable with up / down keys)
 - Send multiple commands seperated by semicolons
