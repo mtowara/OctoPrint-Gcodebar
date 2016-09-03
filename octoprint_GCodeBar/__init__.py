@@ -33,7 +33,7 @@ class GcodebarPlugin(
 		# Plugin here. See https://github.com/foosel/OctoPrint/wiki/Plugin:-Software-Update
 		# for details.
 		return dict(
-			GCodeBar=dict(
+			gcodebar=dict(
 				displayName="Gcodebar Plugin",
 				displayVersion=self._plugin_version,
 
